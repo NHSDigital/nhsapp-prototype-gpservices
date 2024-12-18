@@ -43,11 +43,7 @@
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
-              Dr Max Smith
-            {% else %}
-              Dr Emily Taylor
-            {% endif %}
+            {{ data['appointment-clinician'] or '?' }}
           </dd>
         </div>
 
@@ -56,7 +52,7 @@
             Date of appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-              Monday 20 November 2023
+            {{ data['appointment-date'] or '?' }}
           </dd>
         </div>
 
@@ -65,19 +61,33 @@
             Time of appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-              9:00am
+            {{ data['appointment-time'] or '?' }}
           </dd>
         </div>
 
+        <!-- <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Reason for appointment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['gp-appointment-reason'] or '<em>No reason provided</em>' }}
+          </dd>
+        </div> -->
+   
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
             Reason for appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-reason'] or 'Pain in my foot' }}
+            {% if data['gp-appointment-reason'] %}
+              {{ data['gp-appointment-reason'] }}
+            {% else %}
+              <em>No reason provided</em>
+            {% endif %}
           </dd>
         </div>
-   
+        
+
       </dl>
 
 

@@ -12,7 +12,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <form id="form" method="post" action="/pages/services/gp-appointment-select-appointment-v4" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-location" novalidate="novalidate">
 
         {{ radios({
           idPrefix: "gp-appointment-type",
@@ -20,7 +20,7 @@
           fieldset: {
             legend: {
               text: pageHeading,
-              classes: "nhsuk-fieldset__legend--l",
+              classes: "nhsuk-fieldset__legend--xl",
               isPageHeading: true
             }
           },
@@ -44,6 +44,11 @@
               value: "B12 Injection",
               text: "B12 Injection",
               checked: checked("gp-appointment-type", "B12 Injection")
+            },
+            {
+              value: "Phone appointment",
+              text: "Phone appointment",
+              checked: checked("gp-appointment-type", "Phone appointment")
             }
           ]
         }) }}

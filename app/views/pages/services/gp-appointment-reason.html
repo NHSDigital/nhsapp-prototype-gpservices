@@ -3,7 +3,7 @@
 {% set hub = "Services" %}
 
 {% set backLink = true %}
-{% set backLinkURL = "/pages/services/gp-appointment-select-appointment-v4" %}
+{% set backLinkURL = "/pages/services/gp-appointment-select-appointment-v5" %}
 
 {% set pageHeading = "Tell us how we can help" %}
 
@@ -15,7 +15,7 @@
       {% if data['appointment-location'] == "Phone"  %}
       <form id="form" method="post" action="/pages/services/gp-appointment-phone-number" novalidate="novalidate">
         {% else %}
-      <form id="form" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-confirm-v2" novalidate="novalidate">
       {% endif %}
         {{ textarea({
           name: "gp-appointment-reason",
