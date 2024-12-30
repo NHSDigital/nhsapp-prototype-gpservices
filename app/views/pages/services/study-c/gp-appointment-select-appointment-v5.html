@@ -6,9 +6,9 @@
 
 {% set backLink = true %}
 
-{% set backLinkURL = "/pages/services/gp-appointment-clinician" %}
+{% set backLinkURL = "/pages/services/study-c/gp-appointment-clinician" %}
 
-{% set pageHeading = "Select your appointment" %}
+{% set pageHeading = "Study c: Select your appointment" %}
 
 {% block content %}
 
@@ -19,8 +19,16 @@
       {{ dynamicPageTitle({
         title: pageHeading,
         titleSecondary: true,
-        titleSmall: true
+        titleSmall: false
       })}}
+
+      {{ details({
+        text: "Booking guidance: help from your GP",
+        HTML: "
+        <p>Please note - all appointments booked with GP’s are TELEPHONE CONSULTATIONS first. If you need to be seen you will be offered a same day appointment so book your phone consultation on a day you are available to come in. You will be phoned by the GP within 15 minutes of the chosen time slot and mist be available tto speak at that time.</p>
+        "
+      }) }}
+
 
       {% if "Southbank Practice" in data['gp-appointment-location'] and "Dr Max Smith" in data['gp-appointment-clinician']
       or data['gp-appointment-location'] == "York Road Practice" and data['gp-appointment-clinician'] == "Dr Sarah Clarke" 
@@ -36,7 +44,7 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm3" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm3" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8am">
             <input type="hidden" name="appointment-date" value="Wednesday 11 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -58,20 +66,20 @@
         {% endif %}
         {% endif %}
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-        {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
+      {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm3" method="post" action="/pages/services/gp-appointment-reason">
-            <input type="hidden" name="appointment-time" value="8am">
-            <input type="hidden" name="appointment-date" value="Wednesday 11 Dec 2024">
-            <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
+          <form id="appointmentForm26" method="post" action="/pages/services/study-c/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="8:30am">
+            <input type="hidden" name="appointment-date" value="Tuesday 17 Dec 2024">
+            <input type="hidden" name="appointment-clinician" value="Louise Williams">
             <input type="hidden" name="appointment-location" value="Southbank Practice">
             <div class="nhsapp-card__container">
               <div class="nhsapp-card__content">
-                <a href="javascript:{}" onclick="document.getElementById('appointmentForm3').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
-                  9am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams at Southbank Practice on Wednesday 11 December 2024</span>
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm26').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams at Southbank Practice on Tuesday 4 June 2024</span>
                 </a>
                 <div class="nhsapp-card__below">
-                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams</p>
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Louise Williams</p>
                   <p aria-hidden="true" class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
                 </div>
               </div>
@@ -84,7 +92,7 @@
         {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Max Smith" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm5" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm5" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="10am">
             <input type="hidden" name="appointment-date" value="Wednesday 11 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Max Smith">
@@ -108,7 +116,7 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm6" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm6" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="10:30am">
             <input type="hidden" name="appointment-date" value="Wednesday 11 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -140,7 +148,7 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm9" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm9" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8am">
             <input type="hidden" name="appointment-date" value="Thursday 12 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -164,11 +172,11 @@
         {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm10" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm10" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8:30am">
             <input type="hidden" name="appointment-date" value="Thursday 12 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Louise Williams">
-            <input type="hidden" name="appointment-location" value="Southbank Practice">
+            <input type="hidden" name="appointment-location" value="York Road Practice">
             <div class="nhsapp-card__container">
               <div class="nhsapp-card__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm10').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
@@ -188,7 +196,7 @@
         {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Max Smith" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm11" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm11" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="10am">
             <input type="hidden" name="appointment-date" value="Thursday 12 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Max Smith">
@@ -220,7 +228,7 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm14" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm14" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8am">
               <input type="hidden" name="appointment-date" value="Friday 13 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -244,7 +252,7 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm15" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm15" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8:30am">
             <input type="hidden" name="appointment-date" value="Friday 13 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Louise Williams">
@@ -268,7 +276,7 @@
         {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Max Smith" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
         <li class="nhsapp-card">
-          <form id="appointmentForm16" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm16" method="post" action="/pages/services/study-c/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="10am">
             <input type="hidden" name="appointment-date" value="Friday 13 Dec 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Max Smith">
@@ -305,7 +313,7 @@
           {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
           {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm19" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm19" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8am">
               <input type="hidden" name="appointment-date" value="Monday 16 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -329,11 +337,11 @@
           {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm20" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm20" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8:30am">
               <input type="hidden" name="appointment-date" value="Monday 16 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Louise Williams">
-              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <input type="hidden" name="appointment-location" value="York Road Practice">
               <div class="nhsapp-card__container">
                 <div class="nhsapp-card__content">
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm20').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
@@ -353,7 +361,7 @@
           {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
           {% if "Dr Max Smith" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm21" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm21" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="10am">
               <input type="hidden" name="appointment-date" value="Monday 16 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Max Smith">
@@ -377,7 +385,7 @@
           {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
           {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm22" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm22" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="10:30am">
               <input type="hidden" name="appointment-date" value="Monday 16 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -408,7 +416,7 @@
           {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
           {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm25" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm25" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8am">
               <input type="hidden" name="appointment-date" value="Tuesday 17 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -432,7 +440,7 @@
           {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm26" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm26" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8:30am">
               <input type="hidden" name="appointment-date" value="Tuesday 17 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Louise Williams">
@@ -456,7 +464,7 @@
           {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Max Smith" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm27" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm27" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="10am">
               <input type="hidden" name="appointment-date" value="Tuesday 17 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Max Smith">
@@ -487,7 +495,7 @@
           {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
           {% if "Dr Sarah Clarke" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
             <li class="nhsapp-card">
-              <form id="appointmentForm30" method="post" action="/pages/services/gp-appointment-reason">
+              <form id="appointmentForm30" method="post" action="/pages/services/study-c/gp-appointment-reason">
                 <input type="hidden" name="appointment-time" value="8am">
                 <input type="hidden" name="appointment-date" value="Wednesday 16 Dec 2024">
                 <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke">
@@ -511,11 +519,11 @@
           {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
         {% if "Dr Louise Williams" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm31" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm31" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8:30am">
               <input type="hidden" name="appointment-date" value="Wednesday 16 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Louise Williams">
-              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <input type="hidden" name="appointment-location" value="York Road Practice">
               <div class="nhsapp-card__container">
                 <div class="nhsapp-card__content">
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm31').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
@@ -535,7 +543,7 @@
           {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
           {% if "Dr Max Smith" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
           <li class="nhsapp-card">
-            <form id="appointmentForm32" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm32" method="post" action="/pages/services/study-c/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="10am">
               <input type="hidden" name="appointment-date" value="Wednesday 16 Dec 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Max Smith">

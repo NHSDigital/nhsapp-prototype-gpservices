@@ -1,0 +1,52 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Study c: Check for available GP appointments" %}
+{% set pageDescription = "Check for available GP appointments" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/services/study-c/gp-appointment-type" novalidate="novalidate">
+
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <p>
+        For urgent medical advice, go to 
+        <a href="#" class="app-link nhsuk-link--no-visited-state">111.nhs.uk</a> 
+        or 
+        <a href="#" class="app-link nhsuk-link--no-visited-state">call 111</a>.
+      </p>
+
+      <hr>
+
+            <!-- SECTION - SERVICES -->
+            {{ nhsappSectionHeading({
+              headingText: "Booking guidance: Help from your GP",
+              subheadingText: "Please note - all appointments booked with GP’s are TELEPHONE CONSULTATIONS first. If you need to be seen you will be offered a same day appointment so book your phone consultation on a day you are available to come in. You will be phoned by the GP within 15 minutes of the chosen time slot and mist be available tto speak at that time."
+            })}}
+
+            {{ button({
+              text: "Start",
+              classes: "nhsapp-button"
+            }) }}
+
+
+          </form>
+
+
+    </div>
+  </div>
+
+  {% endblock %}
