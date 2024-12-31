@@ -20,7 +20,7 @@
       {{ nhsappSectionHeading({
         headingText: "Services",
         linkText: "View all",
-        linkUrl: "/pages/study-a/services-p9",
+        linkUrl: "/pages/study-c/services-p9-t2",
         linkAriaLabel: "View all services"
       }) }}
 
@@ -29,7 +29,7 @@
         cards: [
           {
             title: "Request medicines",
-            href: "/pages/your-health/repeat-prescription/select-medicines"
+            href: "#"
           },
           {
             title: "Check if you need urgent medical help using 111 online",
@@ -42,7 +42,7 @@
       {{ nhsappSectionHeading({
         headingText: "Your health",
         linkText: "View all",
-        linkUrl: "/pages/study-a/your-health-p9",
+        linkUrl: "/pages/study-c/your-health-p9-t2",
         linkAriaLabel: "View all your health"
       }) }}
 
@@ -59,7 +59,7 @@
           },
           {
             title: "Upcoming and past appointments",
-            href: "/pages/your-health/study-a/upcoming-and-past-appointments-p9"
+            href: "/pages/study-c/your-health/upcoming-and-past-appointments-p9-t2"
           }
         ]
       }) }}
@@ -75,7 +75,7 @@
           cards: [
             {
               title: 'View your messages',
-              href: '/pages/study-a/messages-p9',
+              href: '#',
               prefixIcon: 'messagesUnread',
               linkAriaLabel: 'Messages, you have ' + data['messages'] + ' unread messages',
               badgeLarge: {
@@ -92,23 +92,24 @@
           cards: [
             {
               title: 'View your messages',
-              href: '/pages/messages-p9',
+              href: '#',
               prefixIcon: 'messages'
             }
           ]
         }) }}
       {% endif %}
 
-      <!-- SECTION - SWITCH PROFILES -->
-      {{ nhsappSectionHeading({
-        headingText: "Account"
-      }) }}
+            <!-- SECTION - SWITCH PROFILES -->
+            {{ nhsappSectionHeading({
+              headingText: "Account"
+            }) }}
+      
+            {{ nhsappCard({
+              title: 'Manage services for another person',
+              href: '#',
+              prefixIcon: 'switchProfile'
+            }) }}
 
-      {{ nhsappCard({
-        title: 'Manage services for another person',
-        href: '/pages/account-and-settings/linked-profiles',
-        prefixIcon: 'switchProfile'
-      }) }}
 
       <!-- CAMPAIGN CARD -->
       <div class="nhsapp-card app-card-link--dark-blue app-card-link--full-width nhsuk-u-margin-top-7">

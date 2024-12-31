@@ -1,0 +1,80 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Study c: Select a location" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/study-c/services/gp-appointment-clinician" novalidate="novalidate">
+
+        <h1 class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+          {{ pageHeading }}
+        </h1>
+
+        {{ details({
+          text: "Booking guidance: help from your GP",
+          HTML: "
+          <p>Book with Nurse Donna at the Southbank Practice for blood tests, B12 injection and warfarin clinic. Blood tests should be booked on an INVITE ONLY basis. Please remember to cancel your appointment if it is no longer needed. Thanks</p>
+          "
+        }) }}
+
+        {{ checkboxes({
+          idPrefix: "gp-appointment-location",
+          name: "gp-appointment-location",
+          fieldset: {
+            legend: {
+            }
+          },
+          hint: {
+            text: "Choose all that apply"
+          },
+          "items": [
+            {
+              value: "York Road Practice",
+              text: "York Road Practice",
+              checked: checked("gp-appointment-location", "York Road Practice"),
+              hint: {
+                text: "20 York Rd, London, SE1 7ND"
+              },
+              exclusiveGroup: "location-list"
+            },
+            {
+              value: "Southbank Practice",
+              text: "Southbank Practice",
+              checked: checked("gp-appointment-location", "Southbank Practice"),
+              hint: {
+                text: "76 Upper Ground, London, SE1 7ND"
+              },
+              exclusiveGroup: "location-list"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "I have no preference",
+              checked: checked("gp-appointment-location", "none"),
+              exclusive: true,
+              exclusiveGroup: "location-list"
+            }
+
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "nhsapp-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
