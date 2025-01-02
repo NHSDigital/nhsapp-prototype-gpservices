@@ -13,24 +13,28 @@
         <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
       </div>
 
-      <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-1">Details</h2>
-
-        <p class="nhsuk-u-font-size-24 nhsuk-u-margin-top-0">
-          <span class="nhsuk-u-visually-hidden">Type: </span>{{ data['gp-appointment-type'] or '?' }}<br>
-          <span class="nhsuk-u-visually-hidden">Date: </span>{{ data['appointment-date'] or '?' }}<br>
-          <span class="nhsuk-u-visually-hidden">Time: </span>{{ data['appointment-time'] or '?' }}
-        </p>
-
-        <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-1">Location</h2>
+      <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Details</h2>
 
         <p>
-          <span class="nhsuk-u-font-size-24">{{ data['appointment-location'] or '?' }} </span>
+          <span class="nhsuk-u-visually-hidden">Type: </span>{{ data['gp-appointment-type'] or '[Appointment type]' }}<br>
+          <span class="nhsuk-u-visually-hidden">Date: </span>{{ data['appointment-date'] or '[Appointment date]' }}<br>
+          <span class="nhsuk-u-visually-hidden">Time: </span>{{ data['appointment-time'] or '[Appointment time]' }}
         </p>
 
-        <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-1">Healthcare professional</h2>
+        <hr>
+
+        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Location</h2>
 
         <p>
-          <span class="nhsuk-u-font-size-24">{{ data['appointment-clinician'] or '?' }} </span>
+          <span">{{ data['appointment-location'] or '[Appointment location]' }} </span>
+        </p>
+
+        <hr>
+
+        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Healthcare professional</h2>
+
+        <p>
+          <span>{{ data['appointment-clinician'] or '[Appointment-clinician]' }} </span>
         </p>
 
       
