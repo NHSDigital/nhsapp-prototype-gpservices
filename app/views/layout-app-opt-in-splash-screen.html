@@ -22,24 +22,29 @@
 {% endif %}
 
 <body>
-  <div style="background-color: #005eb8; height: 50vh; width: 100%;"></div>
+  <div style="background-color: #005eb8; height: 50vh; position:relative;">
+    <img class="app-card-link__img" src="/images/graphics/Graphic.svg" style="position:absolute; bottom:0">
+  </div>
   
-  <div style="background-color: #ffffff; height: 50vh; width: 100%; padding-top: 20px; color: black;">
-    <h1 class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl" style="margin-top: 0; margin-bottom: 20px;">
+  <div style="display:flex; flex-direction:column; background-color: #ffffff; height:50vh; width: 100%; padding: 20px; color: black;">
+    <h1 class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
       Turn on notifications?
     </h1>
     
     <!-- Unordered List for the White Section -->
     <ul style="color: black;">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
+      <li>Helps save on texts and letters cost</li>
+      <li>Contactable without address or phone number</li>
+      <li>Safest channel to receive messages</li>
     </ul>
     
     {% from 'button/macro.njk' import button %}
     {{ button({
       text: "Turn on notifications"
     }) }}
+
+    <a style="align-self:center;" href="#">Not now</a>
+
   </div>
 </body>
 
