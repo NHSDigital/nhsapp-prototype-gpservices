@@ -21,7 +21,7 @@
         classes: "nhsuk-expander",
         text: "Booking guidance: help from your GP",
         HTML: "
-        <p>Book with Nurse Donna at the Southbank Practice for blood tests. Blood tests should be booked on an INVITE ONLY basis. Please remember to cancel your appointment if it is no longer needed. Thanks</p>"
+        <p>Blood tests are INVITE ONLY and should be booked with Nurse Donna at the Southbank Practice. Also book with Donna for warfarin clinic and b12 injections. Please remember to cancel your appointment if it is no longer needed. Thanks</p>"
       }) }}
 
       {% if not (
@@ -37,9 +37,6 @@
       </h2>
 
       <ul class="nhsapp-cards nhsapp-cards--stacked">
-        {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-        {% if "Nurse Donna" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
-        {% if "Blood test" in data['gp-appointment-type'] %}
         <li class="nhsapp-card">
           <form id="appointmentForm3" method="post" action="/pages/study-b/services/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8am">
@@ -80,9 +77,6 @@
             </div>
           </form>
         </li>
-        {% endif %}
-        {% endif %}
-        {% endif %}
       </ul>
 
       <p class="nhsuk-u-margin-bottom-5"></p>
@@ -92,9 +86,6 @@
       </h2>
 
       <ul class="nhsapp-cards nhsapp-cards--stacked">
-        {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-        {% if "Nurse Donna" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
-        {% if "Blood test" in data['gp-appointment-type'] %}
         <li class="nhsapp-card">
           <form id="appointmentForm9" method="post" action="/pages/study-b/services/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8am">
@@ -135,9 +126,6 @@
             </div>
           </form>
         </li>
-        {% endif %}
-        {% endif %}
-        {% endif %}
       </ul>
 
       <p class="nhsuk-u-margin-bottom-5"></p>
@@ -147,9 +135,6 @@
       </h2>
 
       <ul class="nhsapp-cards nhsapp-cards--stacked">
-        {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-        {% if "Nurse Donna" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
-        {% if "Blood test" in data['gp-appointment-type'] %}
           <li class="nhsapp-card">
             <form id="appointmentForm14" method="post" action="/pages/study-b/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="9:30am">
@@ -170,9 +155,6 @@
               </div>
             </form>
           </li>
-        {% endif %}
-        {% endif %}
-        {% endif %}
       </ul>
 
         <h2 class="nhsuk-heading-m nhsuk-u-padding-top-1">
@@ -180,9 +162,6 @@
         </h2>
 
         <ul class="nhsapp-cards nhsapp-cards--stacked">
-          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-          {% if "Nurse Donna" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
-          {% if "Blood test" in data['gp-appointment-type'] %}
           <li class="nhsapp-card">
             <form id="appointmentForm19" method="post" action="/pages/study-b/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="9am">
@@ -223,9 +202,6 @@
               </div>
             </form>
           </li>
-          {% endif %}
-          {% endif %}
-          {% endif %}
         </ul>
 
       <p class="nhsuk-u-margin-bottom-5"></p>
@@ -235,9 +211,6 @@
         </h2>
 
         <ul class="nhsapp-cards nhsapp-cards--stacked">
-          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-          {% if "Nurse Donna" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
-          {% if "Blood test" in data['gp-appointment-type'] %}
           <li class="nhsapp-card">
             <form id="appointmentForm25" method="post" action="/pages/study-b/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8am">
@@ -258,9 +231,6 @@
               </div>
             </form>
           </li>
-          {% endif %}
-          {% endif %}
-          {% endif %}
         </ul>
 
       <p class="nhsuk-u-margin-bottom-5"></p>
@@ -270,9 +240,6 @@
         </h2>
 
         <ul class="nhsapp-cards nhsapp-cards--stacked">
-          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "none" %}
-          {% if "Nurse Donna" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "none" %}
-          {% if "Blood test" in data['gp-appointment-type'] %}
             <li class="nhsapp-card">
               <form id="appointmentForm30" method="post" action="/pages/study-b/services/gp-appointment-reason">
                 <input type="hidden" name="appointment-time" value="8am">
@@ -293,9 +260,6 @@
                 </div>
               </form>
             </li>
-          {% endif %}
-          {% endif %}
-          {% endif %}
         </ul>
       
       <!-- {% if data['gp-appointment-location'] == "none" and data['gp-appointment-clinician'] == "none" %}
